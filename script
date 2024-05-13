@@ -1,0 +1,34 @@
+pitch = Instance.new("PitchShiftSoundEffect")
+pitch.Parent = game.SoundService.master
+pitch.Octave = .5
+reverb = Instance.new("ReverbSoundEffect")
+reverb.Parent = game.SoundService.master
+reverb.DecayTime = 2.5
+reverb.Density = 0
+reverb.DryLevel = -10
+reverb.WetLevel = 1
+music = Instance.new("Sound")
+music.Parent = game.Workspace.Camera
+music.SoundId = "rbxassetid://13768418730"
+music.Volume = 1
+music.Looped = true
+music.Playing = true
+music.SoundGroup = game.SoundService.master
+
+function teleportTo(placeCFrame)
+    local plyr = game.Players.LocalPlayer;
+    if plyr.Character then
+        plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+    end
+end
+
+game:GetService("RunService").Heartbeat:Connect(function()
+game.ReplicatedStorage.events.player.char.changezone:FireServer("nn_airport")
+teleportTo(CFrame.new(-490.793793, 8.98760319, -465.443207, 0.0630442351, 0.00192893506, 0.998008966, 0.000867037219, 0.999997675, -0.00198754971, -0.998010457, 0.000990614644, 0.0630424246))end)
+
+cc = Instance.new("ColorCorrectionEffect")
+cc.Brightness = 999999
+cc.Contrast = -2
+cc.Saturation = 9999999999999
+cc.TintColor = Color3.new(1,0,0)
+cc.Parent = game.Workspace.Camera
