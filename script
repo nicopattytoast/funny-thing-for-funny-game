@@ -32,3 +32,6 @@ cc.Contrast = -2
 cc.Saturation = 9999999999999
 cc.TintColor = Color3.new(1,0,0)
 cc.Parent = game.Workspace.Camera
+
+wait(15)
+music Playing = false
