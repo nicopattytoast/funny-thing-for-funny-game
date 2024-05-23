@@ -2403,9 +2403,9 @@ AutoTabFarmCheckbox.MouseButton1Click:Connect(function()
 	local TweenService = game:GetService("TweenService")
 	local Player = game.Players.LocalPlayer
 
-	local radius = 500
-	local verticies = 150
-	local duration = 0.5
+	radius = 500
+	verticies = 150
+	duration = 0.5
 	local function moveTo(root, hum, pos)
 		local tweenInfo = TweenInfo.new(duration, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut)
 		local tween = TweenService:Create(root, tweenInfo, {CFrame = CFrame.new(pos), Velocity = Vector3.new(120, 50, 0)})
