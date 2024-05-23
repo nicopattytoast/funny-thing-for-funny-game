@@ -1,4 +1,4 @@
-mlocal PlayerGui = game:GetService("Players").LocalPlayer.PlayerGui
+local PlayerGui = game:GetService("Players").LocalPlayer.PlayerGui
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 ScreenGui = Instance.new("ScreenGui")
