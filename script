@@ -1319,7 +1319,7 @@ function add_item_cosmetics(order, name : string, codename : string, imageid : s
 	image.Parent = item
 	image.AnchorPoint = Vector2.new(.5,0)
 	image.BackgroundTransparency = 1
-	--image.Image = imageid DONT FORGET TO UNCOMMENT THIS IT KEEPS CRASHING THATS WHY I COMMENTED
+	--image.Image = imageid
 	image.Position = UDim2.new(.5,0,0,0)
 	image.Size = UDim2.new(.75,0,.75,0)
 
@@ -1410,7 +1410,7 @@ function add_item_taunts(order, name : string, codename : string, imageid : stri
 	image.Parent = item
 	image.AnchorPoint = Vector2.new(.5,0)
 	image.BackgroundTransparency = 1
-	--image.Image = imageid DONT FORGET TO UNCOMMENT THIS IT KEEPS CRASHING THATS WHY I COMMENTED
+	--image.Image = imageid
 	image.Position = UDim2.new(.5,0,0,0)
 	image.Size = UDim2.new(.75,0,.75,0)
 
@@ -1530,7 +1530,7 @@ TeleportTabPlayersTitle.TextColor3 = Color3.new(1,1,1)
 TeleportTabPlayersTitle.TextTransparency = .25
 TeleportTabPlayersTitle.Text = "players"
 TeleportTabPlayersTitleCorner = Instance.new("UICorner")
-TeleportTabPlayersTitleCorner.Parent = TeleportTabHotelTitle
+TeleportTabPlayersTitleCorner.Parent = TeleportTabPlayersTitle
 TeleportTabPlayersTitleCorner.CornerRadius = UDim.new(0,4)
 
 TeleportTabPlayersTitle.MouseButton1Click:Connect(function()
@@ -1547,9 +1547,9 @@ function update_player_teleports()
 		local button = Instance.new("ImageButton")
 		button.Parent = TeleportTabPlayers
 		button.Name = player.Name
-		--if button.Name == game.Players.LocalPlayer.Name then
-		--	button:Destroy()
-		--end
+		if button.Name == game.Players.LocalPlayer.Name then
+			button:Destroy()
+		end
 		button.Image = game.Players:GetUserThumbnailAsync(player.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size100x100)
 		button.ImageTransparency = .25
 		button.BackgroundTransparency = .75
@@ -1593,10 +1593,10 @@ TeleportTabOob.BackgroundColor3 = Color3.new(0,0,0)
 TeleportTabOob.BackgroundTransparency = .75
 TeleportTabOob.Size = UDim2.new(1,0,0,0)
 TeleportTabOobCorner = Instance.new("UICorner")
-TeleportTabOobCorner.Parent = TeleportTabHotel
+TeleportTabOobCorner.Parent = TeleportTabOob
 TeleportTabOobCorner.CornerRadius = UDim.new(0,4)
 TeleportTabOobLayout = Instance.new("UIGridLayout")
-TeleportTabOobLayout.Parent = TeleportTabHotel
+TeleportTabOobLayout.Parent = TeleportTabOob
 TeleportTabOobLayout.CellPadding = UDim2.new(0,8,0,8)
 TeleportTabOobLayout.CellSize = UDim2.new(.5,-8,0,96)
 TeleportTabOobLayout.SortOrder = Enum.SortOrder.LayoutOrder
