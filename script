@@ -1115,8 +1115,6 @@ create_textbox_value("gravity", 100, function() game.Workspace.Gravity = GameTab
 create_textbox_value("max speed", 150)
 
 create_checkbox_value("slide control", false, function() game.ReplicatedStorage.module.specificsModule.SlidingControl.Value = GameTabValues["slide control"].ImageButton.Active end)
-create_checkbox_value("wav cosmetic effects (experimental)", true) --, print("i hate this"))
-create_checkbox_value("wav cosmetic boombox (experimental)", true) --, print("i hate this"))
 
 
 
