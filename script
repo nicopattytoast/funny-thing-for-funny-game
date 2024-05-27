@@ -897,25 +897,7 @@ GameTabBuyEventFrame.LayoutOrder = 1
 --GameTabBuyEventBuyCorner.Parent = GameTabBuyEventBuy
 --GameTabBuyEventBuyCorner.CornerRadius = UDim.new(0,4)
 
-GameTabBuyEventDisable = Instance.new("TextButton")
-GameTabBuyEventDisable.Parent = GameTabBuyEventFrame
-GameTabBuyEventDisable.Name = "buy"
-GameTabBuyEventDisable.LayoutOrder = 1
-GameTabBuyEventDisable.BackgroundColor3 = Color3.new(0,0,0)
-GameTabBuyEventDisable.BackgroundTransparency = .75
-GameTabBuyEventDisable.Position = UDim2.new(0,4,0,0)
-GameTabBuyEventDisable.Size = UDim2.new(1,0,1,-4)
-GameTabBuyEventDisable.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.SemiBold, Enum.FontStyle.Normal)
-GameTabBuyEventDisable.Text = "disable events2"
-GameTabBuyEventDisable.TextColor3 = Color3.new(1,1,1)
-GameTabBuyEventDisable.TextSize = 18
-GameTabBuyEventDisable.TextTransparency = .25
-GameTabBuyEventDisableCorner = Instance.new("UICorner")
-GameTabBuyEventDisableCorner.Parent = GameTabBuyEventDisable
-GameTabBuyEventDisableCorner.CornerRadius = UDim.new(0,4)
-GameTabBuyEventDisable.MouseButton1Click:Connect(function()
-	ReplicatedStorage.events.game.global.purchase:FireServer("jackpot")
-end)
+
 
 
 
