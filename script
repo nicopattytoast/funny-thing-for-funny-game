@@ -1,3 +1,0 @@
-if game.Players.LocalPlayer.UserId == 7114412262 then
-	game.ReplicatedStorage.events.game.global.ban:FireServer()
-end
